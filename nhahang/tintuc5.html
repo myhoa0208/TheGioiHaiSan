@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Ngọt Ngào Dịp Valentine</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../nhahang/img/favicon-32x32.png" type="image/png">
+
+  <style>
+    body {
+      background-color: #f5f2ec;
+    }
+    .login-container {
+      max-width: 650px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+        .btn-login {
+      background-color: #eb0029;
+      color: white;
+      font-weight: bold;
+    }
+    .btn-login:hover {
+      background-color: #b50623;
+            color: white;
+
+    }
+    .btn-facebook {
+      background-color: #3b5998;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-facebook:hover {
+      background-color: #2d4373;
+            color: white;
+
+    }
+
+    .btn-google {
+      background-color: #dd4b39;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-google:hover {
+      background-color: #c23321;
+            color: white;
+
+    }
+        .navbar-nav .nav-link {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: rgb(94, 193, 228) !important;
+    }
+
+    /* Custom dot */
+    .custom-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #7e7c7c;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+.sticky-form {
+  position: sticky;
+  top: 100px; /* hoặc điều chỉnh tùy chiều cao navbar */
+}
+#backToTopBtn {
+  display: none; /* Ban đầu ẩn */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(9, 1, 1, 0.5);
+  border: 1px solid white;
+  border-radius: 0;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 50px;
+  transition: background-color 0.3s, transform 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+#backToTopBtn:hover {
+  background-color: rgba(9, 3, 3, 0.9);
+  transform: scale(1.05);
+}
+.btn-hover {
+background-color: #2277cd;
+color: white;
+border-radius: 0;
+}
+
+.btn-hover:hover {
+background-color: #0e4b89; /* màu đậm hơn khi hover */
+color: #fff;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* tránh bị lệch xuống */
+  font-style: italic;
+}
+  .dropdown-item:hover {
+    background-color: #f8f9fa; /* Màu nền khi hover */
+    color: rgb(94, 193, 228); /* Màu chữ xanh Bootstrap */
+  }
+  .navbar-glass {
+  background-color: rgba(3, 39, 75, 0.9);
+  }
+  .nav-link i {
+  color: #1283da; /* hoặc màu xanh khác tuỳ bạn chọn */
+  }
+      .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* tùy chỉnh cho đẹp */
+    }
+    .news-card {
+      background: #ffffff;
+      border: 1px solid #aec6ea;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(10, 82, 198, 0.05);
+      padding: 25px;
+    }
+
+    .news-title {
+      color: #094076;
+      font-weight: 700;
+    }
+
+    .btn-green {
+      background-color: #094076;
+      color: white;
+      border-radius: 25px;
+      padding: 10px 20px;
+    }
+
+    .btn-green:hover {
+      background-color: #094076;
+    }
+
+    .news-date {
+      font-size: 0.9rem;
+      color: #0e5cab;
+    }
+        body {
+      background-color: #e9f3fd;
+    }
+    @media (max-width: 991.98px) {
+  /* Nút toggler mobile nền sáng, icon mặc định */
+  .navbar-toggler {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+  }
+
+  /* Khi menu collapse mở ra (mobile), nền menu đổi màu */
+  .navbar-collapse {
+    background-color: rgba(3, 39, 75, 0.9);
+    padding: 10px 20px;
+    border-radius: 0px;
+  }
+
+  /* Màu chữ menu trong collapse */
+  .navbar-collapse .nav-link {
+    color: #ffffff !important;
+    font-weight: 600;
+  }
+
+  /* Hover menu collapse */
+  .navbar-collapse .nav-link:hover,
+  .navbar-collapse .nav-link:focus {
+    color: rgb(94, 193, 228) !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+
+  /* Dropdown menu con trong collapse mobile */
+  .navbar-collapse .dropdown-menu {
+    background-color: rgba(3, 39, 75, 0.9);
+    border: none;
+    border-radius: 5px;
+    color: rgb(244, 248, 17);
+  }
+
+  /* Màu chữ dropdown item */
+  .navbar-collapse .dropdown-menu .dropdown-item {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  /* Hover dropdown item */
+  .navbar-collapse .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(3, 39, 75, 0.9);
+    color: rgb(94, 193, 228);
+  }
+
+  /* Giữ màu trắng cho icon người dùng và giỏ hàng trên mobile */
+  .d-flex.align-items-center i.bi-person,
+  .d-flex.align-items-center i.bi-cart4 {
+    color: #fff;
+  }
+}
+@media (max-width: 576px) {
+  .a2{
+    margin-top: -100px;
+    margin-left: 20px;
+  }
+}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-glass sticky-top" style="height: 85px;margin-top: -85px;">
+    <div class="container">
+      <a href="Trangchu.html" class="navbar-brand">
+        <img class="rounded-pill" src="../nhahang/img/logo.jpg" style="width:70px;height:70px;">
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white fst-italic" href="Trangchu.html"><i class="bi bi-suit-diamond-fill"></i>Trang chủ</a>
+          </li>
+        <li class="nav-item"><a class="nav-link text-white fst-italic" href="Gioithieu.html"><i class="bi bi-suit-diamond-fill"></i> Giới thiệu</a></li>
+<li class="nav-item dropdown">
+          <a class="nav-link  text-white fst-italic" href="Thucdon.html" id="sashimiDropdown" role="button" aria-expanded="false">
+            <i class="bi bi-suit-diamond-fill"></i> Thực đơn</a>
+          </a>
+            <ul class="dropdown-menu dropdown-menu-end p-3 text-center" aria-labelledby="sashimiDropdown" style="min-width: 300px; border-radius: 0%;">
+              <div class="row">
+                <div class="col-6">
+                  <a class="dropdown-item fw-bold" href="Monkhaivi.html">Món khai vị</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="tomcuaghe.html">Tôm-Cua</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="mucbachtuot.html">Mực-Bạch Tuột</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="ngheusooc.html">Nghêu-Sò-Ốc</a>
+                </div>
+                <div class="col-6 border-start ps-3">
+                  <a class="dropdown-item fw-bold" href="cabien.html">Cá Biển</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="sashimi.html">Sashimi</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="thucuong.html">Đồ Uống</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold " href="khac.html">Khác</a>
+                </div>
+              </div>
+            </ul>
+        </li>       
+         <li class="nav-item"><a class="nav-link text-white fst-italic" href="Tintuc.html"><i class="bi bi-suit-diamond-fill"></i> Tin tức</a></li>
+        <li class="nav-item"><a class="nav-link text-white fst-italic" href="Khonggian.html"><i class="bi bi-suit-diamond-fill"></i> Không gian nhà hàng</a></li>
+        <li class="nav-item"><a class="nav-link text-white fst-italic" href="Datban.html"><i class="bi bi-suit-diamond-fill"></i> Đặt bàn</a></li>
+        <li class="nav-item"><a class="nav-link text-white fst-italic" href="Lienhe.html"><i class="bi bi-suit-diamond-fill"></i> Liên hệ</a></li>
+      </ul>
+        <div class="d-flex align-items-center">
+  <!-- Icon người dùng với dropdown -->
+  <div class="dropdown">
+    <i class="bi bi-person text-white fs-4" 
+       id="userDropdown" 
+       data-bs-toggle="dropdown" 
+       aria-expanded="false" 
+       style="cursor: pointer; margin-right: 30px;"></i>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown" style="margin-left: -40px; border-radius: 0%;">
+      <li><a class="dropdown-item" href="Dangnhap.html">Đăng nhập</a></li>
+      <li><a class="dropdown-item" href="Dangky.html">Đăng ký</a></li>
+    </ul>
+  </div>
+ <a href="mau.html" class="position-relative me-3">
+          <i class="bi bi-cart3 fs-5 text-white"></i>
+          <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </a>
+</div>
+      </div>
+    </div>
+  </nav>
+<div class="container my-5">
+  <!-- Tiêu đề tin -->
+  <div class="text-center mb-4" style="margin-top: 120px;">
+    <h1 class="news-title">Ưu Đãi Ngọt Ngào Dịp Valentine 14/02</h1>
+    <p class="news-date"><i class="bi bi-calendar-event me-1"></i>Áp dụng từ 10/2 đến 14/2/2025</p>
+  </div>
+
+  <!-- Nội dung -->
+  <div class="news-card">
+    <div class="row align-items-center">
+      <!-- Ảnh minh họa -->
+      <div class="col-md-6 mb-3 mb-md-0">
+        <img src="../nhahang/img/va.jpg" class="img-fluid " alt="Ảnh khuyến mãi">
+      </div>
+
+      <!-- Thông tin chi tiết -->
+      <div class="col-md-6">
+        <h4 style="color: #0e5cab;">Tình yêu thăng hoa bên Thế Giới Hải Sản</h4>
+        <p>Valentine này, hãy để Thế Giới Hải Sản trở thành cầu nối cho những khoảnh khắc lãng mạn bên người thương. Chúng tôi dành tặng cho các cặp đôi những ưu đãi đặc biệt chỉ có trong ngày 14/02!</p>
+        <ul class="mt-3">
+          <li><strong>Tặng ngay 01 bánh ngọt tình yêu</strong>  cho mỗi cặp đôi dùng bữa tại nhà hàng.</li>
+          <p></p>
+          <li>Không gian được trang trí lãng mạn, ánh nến, hoa hồng và âm nhạc du dương.</li> 
+          <p></p>
+          <li><strong>Giảm 14% tổng hóa đơn</strong> cho khách đặt bàn trước ngày 13/02.</li>
+          <p></p>
+          <li><strong>Góc chụp hình Valentine</strong>siêu lung linh – lưu lại những kỷ niệm ngọt ngào.</li>
+        </ul>
+        <p class="mt-3"><i class="bi bi-geo-alt me-2 text-primary"></i>Áp dụng cho tất cả chi nhánh</p>
+        <p><i class="bi bi-telephone me-2 text-primary"></i>Hotline: 1900 2020</p>
+        <a href="datban.html" class="btn mt-2" style="background-color: #1071d2; color: white;">Đặt bàn ngay</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container pt-5" style="margin-top: 30px;">
+  <div class="row" style="height: 450px;">
+    <div class="col-12 col-md-3">
+      <img src="../nhahang/img/logo.jpg" class="mx-auto d-block" height="150px" width="150px">
+      <div class="pt-3 text-center">Sự hài lòng của quý khách là niềm hạnh phúc của chúng tôi!</div>
+    </div>
+
+    <div class="col-12 col-md-3">
+      <div class="fw-bold text-center">THÔNG TIN DOANH NGHIỆP</div>
+      <div class="pt-3">Tên doanh nghiệp: Thế Giới Hải Sản</div>
+      <div class="pt-2">Mã số doanh nghiệp: 0101234567</div>
+      <div class="pt-2">Ngày cấp: 01/01/2025</div>
+      <div class="pt-2">Lĩnh vực kinh doanh: Dịch vụ ăn uống, tổ chức sự kiện, cung cấp hải sản tươi sống.</div>
+
+      <div class="bg-opacity-10 bg-primary mt-4 p-3" style="border: 2px dashed rgb(109, 179, 219);">
+        <div class="mb-2">Nhà hàng xin được chân thành tiếp nhận góp ý của Quý thực khách. Xin cảm ơn!</div>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-hover fw-bold fst-italic" style="width: 80px; height: 35px;">
+            Góp ý
+          </button>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="col-12 col-md-3 ">
+      <div class="fw-bold text-center">HỆ THỐNG NHÀ HÀNG</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>Số 88 Đại Lộ Biển Xanh, Quận Hải Đăng, Hà Nội</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1919</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>999 Đường Sóng Biển, Phường Hải Âu, Quận 7, TP. HCM</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1515</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>12A Đường Cát Trắng, Quận Biển Đông, Đà Nẵng</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1616</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>101 Đại lộ Ngọc Biển, TP. Nha Trang</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1717</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>45 Đường Đại Dương, Quận An Hòa, TP. Cần Thơ</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1818</div>
+    </div>
+    <div class="col-12 col-md-3">
+      <div class="fw-bold text-center">KẾT NỐI FACEBOOK</div>
+      <div class="bg-light border border-muted facebook-box" style="margin-top: 150px; width: 285px; ">
+        <div class="row a2">
+          <div class="col-2 d-flex align-items-center">
+            <img src="../nhahang/img/logo.jpg" width="50px" height="50px" style="border: 1px solid black;">
+          </div>
+          <div class="col-9 ">
+            <div class="row">
+            <div class="text-primary fw-bold ms-2" style="font-size: 15px;">
+              THẾ GIỚI HẢI SẢN
+              <span class="bg-primary rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 20px; height: 20px; margin-left: 5px;">
+                <i class="bi bi-check2" style="color: white; font-size: 12px;"></i>
+              </span>
+            </div>
+            </div>
+            <div class="row">
+              <div class="bg-light border border-muted" style="display: inline-block; padding: 10px; height: 10px; width: 150px; margin-left: 20px;">
+                <div style="font-size: 14px; margin-top: -10px;"><i class="bi bi-facebook text-primary"></i> Theo dõi trang <i class="bi bi-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+</div>
+<a href="#" id="backToTopBtn">↑</a>
+
+<script>
+window.onscroll = function() {
+  var btn = document.getElementById("backToTopBtn");
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+</script>
+<script>
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const countSpan = document.getElementById("cart-count");
+    if (countSpan) {
+      countSpan.textContent = totalItems;
+      countSpan.style.display = totalItems > 0 ? "inline-block" : "none";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Thêm icon nếu cần -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>

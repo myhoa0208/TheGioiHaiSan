@@ -1,0 +1,509 @@
+.carousel-img-wrapper {
+    position: relative;
+  }
+
+  .carousel-img {
+    height: 585px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .carousel-caption {
+    z-index: 2;
+    color: white;
+    bottom: 30%; 
+    transform: translateY(0);
+    animation: slideIn 1s ease-out;
+  }
+  @keyframes slideIn {
+0% {
+  transform: translateY(50px);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+  .carousel-caption h1 {
+    font-weight: 400;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    opacity: 1;
+    transition: background-color 0.3s ease;
+  }
+
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 70% 70%;
+  }
+  .navbar-glass {
+  background-color: rgba(3, 39, 75, 0.9);
+  }
+  .nav-link i {
+  color: #1283da; 
+  }
+  .lobster-font {
+  font-family: 'Lobster', cursive;
+  }
+  .zoom-img {
+transition: transform 0.3s ease;
+}
+
+.zoom-img:hover {
+transform: scale(1.1); /* Phóng to 10% khi di chuột vào */
+}
+.custom-btn:hover {
+background-color: #0c2d57 !important;
+}
+.image-container-fluid {
+          position: relative;
+          overflow: hidden;
+      }
+
+      .image-container-fluid img {
+          width: 100%;
+          height: auto;
+          display: block;
+      }
+      /* Tạo răng cưa */
+      .zigzag-top, .zigzag-bottom {
+          position: absolute;
+          left: 0;
+          right: 0;
+          background-color: white;
+          height: 30px;  /* Chiều cao của răng cưa */
+      }
+      /* Răng cưa trên (răng cưa hướng lên) */
+      .zigzag-top {
+          top: 0;
+          clip-path: polygon(
+              0% 0%, 1% 50%, 2% 0%, 3% 50%, 4% 0%, 5% 50%, 6% 0%, 7% 50%, 8% 0%, 9% 50%, 10% 0%, 11% 50%, 12% 0%, 13% 50%, 14% 0%, 
+              15% 50%, 16% 0%, 17% 50%, 18% 0%, 19% 50%, 20% 0%, 21% 50%, 22% 0%, 23% 50%, 24% 0%, 25% 50%, 26% 0%, 27% 50%, 28% 0%, 
+              29% 50%, 30% 0%, 31% 50%, 32% 0%, 33% 50%, 34% 0%, 35% 50%, 36% 0%, 37% 50%, 38% 0%, 39% 50%, 40% 0%, 41% 50%, 42% 0%, 
+              43% 50%, 44% 0%, 45% 50%, 46% 0%, 47% 50%, 48% 0%, 49% 50%, 50% 0%, 51% 50%, 52% 0%, 53% 50%, 54% 0%, 55% 50%, 56% 0%, 
+              57% 50%, 58% 0%, 59% 50%, 60% 0%, 61% 50%, 62% 0%, 63% 50%, 64% 0%, 65% 50%, 66% 0%, 67% 50%, 68% 0%, 69% 50%, 70% 0%, 
+              71% 50%, 72% 0%, 73% 50%, 74% 0%, 75% 50%, 76% 0%, 77% 50%, 78% 0%, 79% 50%, 80% 0%, 81% 50%, 82% 0%, 83% 50%, 84% 0%, 
+              85% 50%, 86% 0%, 87% 50%, 88% 0%, 89% 50%, 90% 0%, 91% 50%, 92% 0%, 93% 50%, 94% 0%, 95% 50%, 96% 0%, 97% 50%, 98% 0%, 
+              99% 50%, 100% 0%, 101% 50%, 102% 0%, 103% 50%, 104% 0%, 105% 50%, 106% 0%, 107% 50%, 108% 0%, 109% 50%, 110% 0%, 111% 50%, 
+              112% 0%, 113% 50%, 114% 0%, 115% 50%, 116% 0%, 117% 50%, 118% 0%, 119% 50%, 100% 0%);
+      }
+      /* Răng cưa dưới (răng cưa hướng xuống) */
+      .zigzag-bottom {
+          bottom: 0;
+          clip-path: polygon(
+              0% 100%, 1% 50%, 2% 100%, 3% 50%, 4% 100%, 5% 50%, 6% 100%, 7% 50%, 8% 100%, 9% 50%, 10% 100%, 11% 50%, 12% 100%, 13% 50%, 
+              14% 100%, 15% 50%, 16% 100%, 17% 50%, 18% 100%, 19% 50%, 20% 100%, 21% 50%, 22% 100%, 23% 50%, 24% 100%, 25% 50%, 26% 100%, 
+              27% 50%, 28% 100%, 29% 50%, 30% 100%, 31% 50%, 32% 100%, 33% 50%, 34% 100%, 35% 50%, 36% 100%, 37% 50%, 38% 100%, 39% 50%, 
+              40% 100%, 41% 50%, 42% 100%, 43% 50%, 44% 100%, 45% 50%, 46% 100%, 47% 50%, 48% 100%, 49% 50%, 50% 100%, 51% 50%, 52% 100%, 
+              53% 50%, 54% 100%, 55% 50%, 56% 100%, 57% 50%, 58% 100%, 59% 50%, 60% 100%, 61% 50%, 62% 100%, 63% 50%, 64% 100%, 65% 50%, 
+              66% 100%, 67% 50%, 68% 100%, 69% 50%, 70% 100%, 71% 50%, 72% 100%, 73% 50%, 74% 100%, 75% 50%, 76% 100%, 77% 50%, 78% 100%, 
+              79% 50%, 80% 100%, 81% 50%, 82% 100%, 83% 50%, 84% 100%, 85% 50%, 86% 100%, 87% 50%, 88% 100%, 89% 50%, 90% 100%, 91% 50%, 
+              92% 100%, 93% 50%, 94% 100%, 95% 50%, 96% 100%, 97% 50%, 98% 100%, 99% 50%, 100% 100%, 101% 50%, 102% 100%, 103% 50%, 104% 100%, 
+              105% 50%, 106% 100%, 107% 50%, 108% 100%, 109% 50%, 110% 100%, 111% 50%, 112% 100%, 113% 50%, 114% 100%, 115% 50%, 116% 100%, 
+              117% 50%, 118% 100%, 119% 50%, 100% 100%);
+      }
+      .card {
+background-color: transparent; /* Nền card trong suốt */
+border-color: #3583bf; /* Loại bỏ viền */
+border-radius: 0%;
+}
+
+  .card-body {
+  background-color: transparent; /* Nền trong suốt của phần nội dung */
+  color: black; /* Màu chữ */
+  padding: 15px;
+  }
+  .img-hover-wrapper {
+  width: 580px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 0px;
+  }
+
+  .img-hover-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: grayscale(100%);
+  }
+
+  .img-hover-wrapper:hover img {
+  transform: scale(1.05); /* Phóng to nhẹ, không phá bố cục */
+  filter: grayscale(0%);
+  }
+  .img-hover-wrapper {
+  position: relative;
+  }
+
+  .img-hover-wrapper img {
+  transition: transform 0.5s ease;
+  filter: grayscale(100%);
+  width: 100%; /* Giữ ảnh toàn bộ chiều rộng của div */
+  height: auto; /* Tự động điều chỉnh chiều cao */
+  }
+  .img-hover-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%; /* Lớp phủ chỉ chiếm nửa trên của hình ảnh */
+  background: rgba(0, 0, 0, 0.3); /* Lớp phủ màu đen trong suốt (opacity 0.5) */
+  transition: opacity 0.5s ease;
+  }
+.caption {
+position: absolute;
+bottom: 0px; /* Căn dưới của ảnh */
+left: 50%;
+right: 0px;
+top: 0px;
+color: white;
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Tạo hiệu ứng bóng đổ cho chữ */
+z-index: 2; /* Đảm bảo caption ở trên lớp phủ */
+padding: 10px;
+background: rgba(2, 23, 54, 0.8); /* Lớp nền đen trong suốt phía sau caption */
+pointer-events: none;
+}
+
+.img-hover-wrapper:hover:before {
+opacity: 0; /* Ẩn lớp phủ khi hover */
+}
+
+.img-hover-wrapper:hover .caption {
+background: rgba(2, 23, 54, 0.8); /* Tăng độ tối khi hover */
+}
+hr {
+opacity: 1; /* Đảm bảo độ mờ là 1 (không mờ) */
+}
+.testimonial-carousel {
+  margin-top: 170px; /* bạn giữ hoặc điều chỉnh lại */
+  position: relative;
+  background-image: url('/nhahang/img/ykien.jpg') ; /* ảnh nền */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  width: 100vw; /* full chiều ngang viewport */
+  max-width: 100%; /* không tràn */
+  height: 500px;
+  overflow: hidden; /* tránh phần thừa */
+}
+
+  .testimonial-carousel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Lớp phủ mờ */
+  }
+  .ykien {
+    position: relative;
+    z-index: 1;
+  }
+.carousel-indicators [data-bs-target] {
+width: 12px;
+height: 12px;
+border-radius: 50%; /* Làm nó thành hình tròn */
+background-color: white; /* Màu trắng nổi bật */
+opacity: 0.5; /* Chấm mờ khi chưa active */
+margin: 5px;
+border: none; /* Không có viền */
+}
+
+.carousel-indicators .active {
+opacity: 1; /* Chấm active sáng rõ */
+}
+.btn-hover {
+background-color: #2277cd;
+color: white;
+border-radius: 0;
+}
+
+.btn-hover:hover {
+background-color: #0e4b89; /* màu đậm hơn khi hover */
+color: #fff;
+}
+#backToTopBtn {
+  display: none; /* Ban đầu ẩn */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(9, 1, 1, 0.5);
+  border: 1px solid white;
+  border-radius: 0;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 50px;
+  transition: background-color 0.3s, transform 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+#backToTopBtn:hover {
+  background-color: rgba(9, 3, 3, 0.9);
+  transform: scale(1.05);
+}
+.navbar-nav .nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(94, 193, 228) !important; 
+}
+.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link:hover {
+    color: rgb(94, 193, 228) !important; 
+}
+
+/* Hiển thị dropdown khi hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* tránh bị lệch xuống */
+  font-style: italic;
+}
+  .dropdown-item:hover {
+    background-color: #f8f9fa; /* Màu nền khi hover */
+    color: rgb(94, 193, 228); /* Màu chữ xanh Bootstrap */
+  }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* tùy chỉnh cho đẹp */
+    }
+@media (max-width: 991.98px) {
+  /* Nút toggler mobile nền sáng, icon mặc định */
+  .navbar-toggler {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+  }
+
+  /* Khi menu collapse mở ra (mobile), nền menu đổi màu */
+  .navbar-collapse {
+    background-color: rgba(3, 39, 75, 0.9);
+    padding: 10px 20px;
+    border-radius: 0px;
+  }
+
+  /* Màu chữ menu trong collapse */
+  .navbar-collapse .nav-link {
+    color: #ffffff !important;
+    font-weight: 600;
+  }
+
+  /* Hover menu collapse */
+  .navbar-collapse .nav-link:hover,
+  .navbar-collapse .nav-link:focus {
+    color: rgb(94, 193, 228) !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+
+  /* Dropdown menu con trong collapse mobile */
+  .navbar-collapse .dropdown-menu {
+    background-color: rgba(3, 39, 75, 0.9);
+    border: none;
+    border-radius: 5px;
+    color: rgb(244, 248, 17);
+  }
+
+  /* Màu chữ dropdown item */
+  .navbar-collapse .dropdown-menu .dropdown-item {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  /* Hover dropdown item */
+  .navbar-collapse .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(3, 39, 75, 0.9);
+    color: rgb(94, 193, 228);
+  }
+
+  /* Giữ màu trắng cho icon người dùng và giỏ hàng trên mobile */
+  .d-flex.align-items-center i.bi-person,
+  .d-flex.align-items-center i.bi-cart4 {
+    color: #fff;
+  }
+}
+   @media (max-width: 768px) {
+      .row.g-4, .row.g-8 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .img-hover-wrapper, .card img {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      /* Ẩn răng cưa trên mobile nếu muốn */
+
+    }
+.sua1 {
+  position: relative;
+  width: 100vw; /* 100% viewport width */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 5rem 0;
+  background-size: cover;
+  background-position: center;
+  color: #072f57;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+
+/* Ảnh nền */
+.image-container-fluid img.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+
+  /* Mặc định desktop giữ nguyên chiều cao */
+  height: 850px;
+}
+
+/* Lớp chứa nội dung phủ lên ảnh nền */
+.image-container-fluid .overlay-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* MOBILE: Ảnh nền giãn theo nội dung container */
+@media (max-width: 768px) {
+  .image-container-fluid {
+    height: auto;
+  }
+.b2{
+  margin-top: -230px;
+}
+  .image-container-fluid img.bg-image {
+    position: absolute;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .container {
+    width: 95% !important;
+  }
+  .lobster-font {
+      font-size: 2.2rem !important;
+    }
+
+    .carousel-caption p {
+      font-size: 16px !important;
+      padding-top: 10px !important;
+      line-height: 1.4;
+      text-align: center !important;
+      
+    }
+
+    .author {
+      font-size: 14px !important;
+      margin-top: 8px !important;
+        }
+  .ykien {
+    text-align: center !important;   /* căn giữa toàn bộ caption */
+    left: 50% !important;             /* đẩy vào giữa ngang */
+    transform: translateX(-50%) !important; /* căn giữa chính xác */
+    padding-left: 15px !important;    /* thêm padding nếu cần */
+    padding-right: 15px !important;
+  }
+    .carousel-indicators {
+      justify-content: center;
+      padding-bottom: 15px;
+      
+    }
+
+    .carousel-indicators button {
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+    }
+  
+}
+
+  .lobster-font {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .carousel-caption p {
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .author {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+@media (max-width: 576px) {
+  .caption div.fst-italic {
+    font-size: 15px !important;
+  }
+    .caption {
+    font-size: 13px; /* Giảm font chữ để vừa hơn */
+  }
+    .testimonial-header {
+    font-size: 2rem !important;  /* chữ nhỏ hơn trên mobile */
+    padding-top: 2rem !important;
+  }
+  .testimonial-header hr {
+    width: 30% !important;        /* đường kẻ ngắn hơn trên mobile */
+    margin: 0 10px !important;
+    height: 1.5px !important;
+  }
+  .a2{
+    margin-top: -100px;
+    margin-left: 20px;
+  }
+    .carousel-inner {
+    margin-left: 0 !important;
+    width: 100% !important;  /* đảm bảo rộng full */
+  }
+
+}
+ 
+
+

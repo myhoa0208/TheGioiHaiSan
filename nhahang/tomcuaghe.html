@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Món Tôm Cua</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="../nhahang/img/favicon-32x32.png" type="image/png">
+
+  <style>
+    /* Navbar */
+    .navbar-glass {
+      background-color: rgba(3, 39, 75, 0.9);
+    }
+    .nav-link i {
+      color: #1283da;
+    }
+    .lobster-font {
+      font-family: 'Lobster', cursive;
+    }
+    hr {
+      opacity: 1;
+    }
+
+    /* Sidebar */
+    .sidebar-custom {
+      position: fixed;
+      top: 85px; /* Đặt cách biệt với thanh menu */
+      left: 0;
+      width: 250px;
+      height: calc(100vh - 85px); /* Cố định chiều cao sidebar từ dưới thanh menu */
+      background-color: #5a8bb1;
+      padding-top: 20px;
+      z-index: 5;
+      overflow-y: auto;
+    }
+    .sidebar-custom h4 {
+      color: #ffffff;
+    }
+    .sidebar-custom .btn {
+      color: #093f75;
+      background-color: transparent;
+      border: none;
+      text-align: left;
+      padding: 0px 20px;
+      font-size: 16px;
+      transition: background-color 0.3s, color 0.3s;
+      width: 100%;
+    }
+    .sidebar-custom .btn:hover {
+      background-color: #4387cf;
+      color: #ffd700;
+    }
+    .sidebar-custom i {
+      color: #d4af37;
+    }
+    .a1{
+        font-family: 'Times New Roman', serif;
+
+    }
+    /* Main Content Area */
+    .main-content {
+      padding-left: 250px;  /* Cố định nội dung bên phải sidebar */
+      padding-top: 85px;    /* Cố định cách biệt với thanh menu */
+      padding-right: 30px;  /* Giữ một chút khoảng cách bên phải */
+      position: relative;   /* Đảm bảo không bị đè lên */
+    
+    }
+
+    /* Row of cards */
+    /* Row of cards */
+/* Row of cards */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Khoảng cách giữa các card trong cả chiều ngang và chiều dọc */
+  margin-top: 20px; /* Đảm bảo khoảng cách trên giữa các card */
+}
+
+/* Các cột card */
+.col-md-4 {
+  flex: 1;
+  max-width: 30%;
+  margin: 10px 0;  /* Tạo khoảng cách đều giữa các card theo chiều dọc */
+  box-sizing: border-box; /* Đảm bảo các margin không làm ảnh hưởng đến kích thước của cột */
+}
+
+
+/* Card customization */
+.card-custom {
+  height: 100%; /* Làm cho các card có chiều cao đầy đủ */
+  display: flex;
+  flex-direction: column; /* Cho phép nội dung trong card co giãn */
+  justify-content: space-between; /* Đảm bảo nội dung card đều */
+  width: 280px;
+}
+.card-custom img {
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.card-custom .card-body {
+  text-align: center;
+  flex-grow: 1; /* Cho phép phần nội dung trong card co giãn */
+}
+
+.card-custom .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1px; /* Đảm bảo khoảng cách giữa nút và đáy card */
+}
+.card {
+background-color: transparent; /* Nền card trong suốt */
+border-color: #3583bf; /* Loại bỏ viền */
+border-radius: 0%;
+}
+
+.card-body {
+background-color: transparent; /* Nền trong suốt của phần nội dung */
+color: black; /* Màu chữ */
+padding: 15px;
+}
+
+    .btn-detail {
+      background-color: #1283da;
+      color: white;
+      border: none;
+      padding: 5px 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-detail:hover {
+      background-color: #0e6fb1;
+    }
+
+    /* Hình ảnh nền */
+    body {
+      background-image: url('../nhahang/img/nen.png');
+      background-size: cover;
+      background-position: center;
+        }
+    /* Loại bỏ gạch chân cho liên kết */
+a {
+  text-decoration: none; /* Loại bỏ gạch chân */
+}
+.btn-hover {
+background-color: #2277cd;
+color: white;
+border-radius: 0;
+}
+#backToTopBtn {
+  display: none; /* Ban đầu ẩn */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(9, 1, 1, 0.5);
+  border: 1px solid white;
+  border-radius: 0;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 50px;
+  transition: background-color 0.3s, transform 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.btn-hover:hover {
+background-color: #0e4b89; /* màu đậm hơn khi hover */
+color: #fff;
+}
+/* Thêm hiệu ứng hover cho liên kết nếu cần */
+#backToTopBtn:hover {
+  background-color: rgba(9, 3, 3, 0.9);
+  transform: scale(1.05);
+}
+.navbar-nav .nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(94, 193, 228) !important; /* Màu chữ khi hover */
+}
+.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link:hover {
+    color: rgb(94, 193, 228) !important; /* Màu chữ khi hover và khi chọn */
+}
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* tránh bị lệch xuống */
+  font-style: italic;
+}
+  .dropdown-item:hover {
+    background-color: #f8f9fa; /* Màu nền khi hover */
+    color: rgb(94, 193, 228); /* Màu chữ xanh Bootstrap */
+  }
+      .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* tùy chỉnh cho đẹp */
+    }
+@media (max-width: 991.98px) {
+  /* Nút toggler mobile nền sáng, icon mặc định */
+  .navbar-toggler {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+  }
+
+  /* Khi menu collapse mở ra (mobile), nền menu đổi màu */
+  .navbar-collapse {
+    background-color: rgba(3, 39, 75, 0.9);
+    padding: 10px 20px;
+    border-radius: 0px;
+  }
+
+  /* Màu chữ menu trong collapse */
+  .navbar-collapse .nav-link {
+    color: #ffffff !important;
+    font-weight: 600;
+  }
+
+  /* Hover menu collapse */
+  .navbar-collapse .nav-link:hover,
+  .navbar-collapse .nav-link:focus {
+    color: rgb(94, 193, 228) !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+
+  /* Dropdown menu con trong collapse mobile */
+  .navbar-collapse .dropdown-menu {
+    background-color: rgba(3, 39, 75, 0.9);
+    border: none;
+    border-radius: 5px;
+    color: rgb(244, 248, 17);
+  }
+
+  /* Màu chữ dropdown item */
+  .navbar-collapse .dropdown-menu .dropdown-item {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  /* Hover dropdown item */
+  .navbar-collapse .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(3, 39, 75, 0.9);
+    color: rgb(94, 193, 228);
+  }
+
+  /* Giữ màu trắng cho icon người dùng và giỏ hàng trên mobile */
+  .d-flex.align-items-center i.bi-person,
+  .d-flex.align-items-center i.bi-cart4 {
+    color: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  .sidebar-custom {
+    display: none !important;
+  }
+
+  .main-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .col-md-4 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card-custom {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: -25px;
+  }
+    .sticky-menu-btn {
+    position: fixed;
+    top:90px;       /* cách lề trên 10px */
+    left: -10px;      /* cách lề trái 10px */
+    z-index: 1050;   /* cao hơn offcanvas */
+  }
+  .row {
+    margin-left: 0 !important;
+  }
+}
+
+  #sidebarMobile.offcanvas {
+    width: 220px !important; /* nhỏ hơn mặc định ~300px */
+  }
+
+  /* Giảm padding phần thân offcanvas */
+  #sidebarMobile .offcanvas-body {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Các nút danh mục */
+  #sidebarMobile .offcanvas-body a.btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+  }
+
+  /* Tăng khoảng cách nhẹ giữa các nút */
+  #sidebarMobile .offcanvas-body a.btn + a.btn {
+    margin-top: 0.3rem;
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-glass sticky-top" style="height: 85px;">
+  <div class="container">
+    <a href="Trangchu.html" class="navbar-brand">
+      <img class="rounded-pill" src="../nhahang/img/logo.jpg" style="width:70px;height:70px;">
+    </a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+            <a class="nav-link text-white fst-italic" href="Trangchu.html"><i class="bi bi-suit-diamond-fill"></i>Trang chủ</a>
+          </li>
+        <li class="nav-item"><a class="nav-link text-white fst-italic" href="Gioithieu.html"><i class="bi bi-suit-diamond-fill"></i> Giới thiệu</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link fst-italic" id="sashimiDropdown" role="button" href="Thucdon.html" aria-expanded="false" style="color: rgb(94, 193, 228);">
+            <i class="bi bi-suit-diamond-fill"></i> Thực đơn</a>
+          </a>
+            <ul class="dropdown-menu dropdown-menu-end p-3 text-center" aria-labelledby="sashimiDropdown" style="min-width: 300px; border-radius: 0%;">
+              <div class="row" style="margin-top: -8px;">
+                <div class="col-5">
+                  <a class="dropdown-item fw-bold" href="Monkhaivi.html">Món khai vị</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="tomcuaghe.html">Tôm-Cua</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="mucbachtuot.html">Mực-Bạch Tuột</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="ngheusooc.html">Nghêu-Sò-Ốc</a>
+                </div>
+                <div class="col-5 border-start ps-3">
+                  <a class="dropdown-item fw-bold" href="cabien.html">Cá Biển</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="sashimi.html">Sashimi</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="thucuong.html">Đồ Uống</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold " href="khac.html">Khác</a>
+                </div>
+              </div>
+            </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link text-white fst-italic" href="Tintuc.html"><i class="bi bi-suit-diamond-fill"></i> Tin tức</a></li>
+        <li class="nav-item"><a class="nav-link text-white fst-italic" href="Khonggian.html"><i class="bi bi-suit-diamond-fill"></i> Không gian nhà hàng</a></li>
+        <li class="nav-item"><a class="nav-link text-white fst-italic" href="Datban.html"><i class="bi bi-suit-diamond-fill"></i> Đặt bàn</a></li>
+        <li class="nav-item"><a class="nav-link text-white fst-italic" href="Lienhe.html"><i class="bi bi-suit-diamond-fill"></i> Liên hệ</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+  <!-- Icon người dùng với dropdown -->
+  <div class="dropdown">
+    <i class="bi bi-person text-white fs-4" 
+       id="userDropdown" 
+       data-bs-toggle="dropdown" 
+       aria-expanded="false" 
+       style="cursor: pointer; margin-right: 30px;"></i>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown" style="margin-left: -40px; border-radius: 0%;">
+      <li><a class="dropdown-item" href="Dangnhap.html">Đăng nhập</a></li>
+      <li><a class="dropdown-item" href="Dangky.html">Đăng ký</a></li>
+    </ul>
+  </div>
+        <a href="mau.html" class="position-relative me-3">
+          <i class="bi bi-cart3 fs-5 text-white"></i>
+          <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </a>
+</div>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<button class="btn d-md-none mb-3 sticky-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile" aria-controls="sidebarMobile" style="border-radius: 0%;">
+  <i class="bi bi-card-list fs-1"></i>
+</button>
+
+<div class="sidebar-custom d-flex flex-column a1">
+  <h4 class="lobster-font text-center mb-4">Danh mục</h4>
+  <a href="Monkhaivi.html"><button class="btn d-flex align-items-center gap-2 fw-bold">
+    Món khai vị
+  </button></a>
+  <hr>
+  <a href="tomcuaghe.html"><button class="btn d-flex align-items-center gap-2 fw-bold">
+    Tôm-Cua
+  </button></a>
+  <hr>
+  <a href="mucbachtuot.html"><button class="btn d-flex align-items-center gap-2 fw-bold">
+     Mực-Bạch Tuột
+  </button></a>
+  <hr>
+  <a href="ngheusooc.html"><button class="btn d-flex align-items-center gap-2 fw-bold">
+    Nghêu-Sò-Ốc
+  </button></a>
+  <hr>
+  <a href="cabien.html"><button class="btn d-flex align-items-center gap-2 fw-bold">
+    Cá Biển
+  </button></a>
+  <hr>
+  <a href="sashimi.html"><button class="btn d-flex align-items-center gap-2 fw-bold">
+    Sashimi
+  </button></a>
+  <hr>
+  <a href="thucuong.html"><button class="btn d-flex align-items-center gap-2 fw-bold">
+     Đồ Uống
+  </button></a>
+  <hr>
+  <a href="khac.html">  <button class="btn d-flex align-items-center gap-2 fw-bold">
+    Khác
+  </button></a>
+  <hr>
+</div>
+
+<!-- Offcanvas sidebar cho mobile -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMobile" aria-labelledby="sidebarMobileLabel" style="background-color: #5a8bb1;">
+  <div class="offcanvas-header" >
+    <h5 class="offcanvas-title lobster-font fs-1" id="sidebarMobileLabel text-center">Danh mục</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="Monkhaivi.html"><button class="btn d-flex align-items-center gap-1 fw-bold">
+    Món khai vị
+  </button></a>
+  <hr>
+  <a href="tomcuaghe.html" ><button class="btn d-flex align-items-center gap-1 fw-bold" style="margin-top: -10px;">
+    Tôm-Cua
+  </button></a>
+  <hr>
+  <a href="mucbachtuot.html"><button class="btn d-flex align-items-center gap-1 fw-bold" style="margin-top: -10px;">
+     Mực-Bạch Tuột
+  </button></a>
+  <hr>
+  <a href="ngheusooc.html"><button class="btn d-flex align-items-center gap-1 fw-bold" style="margin-top: -10px;">
+    Nghêu-Sò-Ốc
+  </button></a>
+  <hr>
+  <a href="cabien.html"><button class="btn d-flex align-items-center gap-1 fw-bold" style="margin-top: -10px;">
+    Cá Biển
+  </button></a>
+  <hr>
+  <a href="sashimi.html"><button class="btn d-flex align-items-center gap-1 fw-bold" style="margin-top: -10px;">
+    Sashimi
+  </button></a>
+  <hr>
+  <a href="thucuong.html"><button class="btn d-flex align-items-center gap-1 fw-bold" style="margin-top: -10px;">
+     Đồ Uống
+  </button></a>
+  <hr>
+  <a href="khac.html">  <button class="btn d-flex align-items-center gap-1 fw-bold" style="margin-top: -10px;">
+    Khác
+  </button></a>
+  <hr>
+</div>
+</div>
+<!-- Main Content -->
+<div class="main-content" style="margin-left: 45px; margin-top: -80px;">
+    <div class="lobster-font text-center" style="font-size: 4rem; color: #115081;">Món Tôm-Cua</div>
+  <div class="row" >
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tom-cang-xanh-lam-chay-toi.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Càng Cháy Tỏi</h5>
+          <div class="card-footer">
+            <span class="card-price">150.000 VND</span>
+            <a href="Chitiet.html#cua1"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k1">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomalaskasotme.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Alaska Sốt Me</h5>
+          <div class="card-footer">
+            <span class="card-price">2.300.000 VND</span>
+            <a href="Chitiet.html#cua2"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k2">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomcangxanhnaucari.webp" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Càng Nấu Cari</h5>
+          <div class="card-footer">
+            <span class="card-price">200.000 VND</span>
+            <a href="Chitiet.html#cua3"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k3">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomcuonkhoaitay.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Cuộn Khoai Tây</h5>
+          <div class="card-footer">
+            <span class="card-price">99.000 VND</span>
+            <a href="Chitiet.html#cua4"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k4">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomhumalaskasototsingapore.webp" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Alaska Sốt Sing</h5>
+          <div class="card-footer">
+            <span class="card-price">2.599.000 VND</span>
+            <a href="Chitiet.html#cua5"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k5">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomhumbonghap.webp" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Hùm Bông Hấp</h5>
+          <div class="card-footer">
+            <span class="card-price">1.199.000 VND</span>
+            <a href="Chitiet.html#cua6"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k6">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomhumchao.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Cháo Tôm Hùm</h5>
+          <div class="card-footer">
+            <span class="card-price">999.000 VND</span>
+            <a href="Chitiet.html#cua7"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k7">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomhumnuongphomai.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Hùm Nướng Phô Mai</h5>
+          <div class="card-footer">
+            <span class="card-price">1.150.000 VND</span>
+            <a href="Chitiet.html#cua8"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k8">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomhumsototsingapore.webp" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Hùm Sốt Sing</h5>
+          <div class="card-footer">
+            <span class="card-price">1.050.000 VND</span>
+            <a href="Chitiet.html#cua9"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k9">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tommunibotoi.png" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Mũ Ni Bơ Tỏi</h5>
+          <div class="card-footer">
+            <span class="card-price">400.000 VND</span>
+            <a href="Chitiet.html#cua10"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k10">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tommunisotme.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Mũ Ni Sốt Me</h5>
+          <div class="card-footer">
+            <span class="card-price">400.000 VND</span>
+            <a href="Chitiet.html#cua11"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k11">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomsotkieumexico.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Sốt Kiểu Mexico</h5>
+          <div class="card-footer">
+            <span class="card-price">150.000 VND</span>
+            <a href="Chitiet.html#cua12"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k12">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/tomsottieuden.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Tôm Sốt Tiêu Đen</h5>
+          <div class="card-footer">
+            <span class="card-price">299.000 VND</span>
+            <a href="Chitiet.html#cua13"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k13">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/cuacomhap.webp" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Cua Cốm Hấp</h5>
+          <div class="card-footer">
+            <span class="card-price">399.000 VND</span>
+            <a href="Chitiet.html#cua14"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k14">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/cuahoangdesotbotoi.png" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Cua Hoàng Đế Sốt Bơ Tỏi</h5>
+          <div class="card-footer">
+            <span class="card-price">2.999.000 VND</span>
+            <a href="Chitiet.html#cua15"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k15">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/cuahoangdesotphomai.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Cua Hoàng Đế Sốt Phô Mai</h5>
+          <div class="card-footer">
+            <span class="card-price">2.999.000 VND</span>
+            <a href="Chitiet.html#cua16"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k16">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/cuahoangdesottrungmuoi.png" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Cua Hoàng Đế Trứng Muối</h5>
+          <div class="card-footer">
+            <span class="card-price">3.150.000 VND</span>
+            <a href="Chitiet.html#cua17"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k17">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/cuamien.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Miến Xào Cua</h5>
+          <div class="card-footer">
+            <span class="card-price">350.000 VND</span>
+            <a href="Chitiet.html#cua18"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k18">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/cualonghongkong.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Cua Lông HongKong</h5>
+          <div class="card-footer">
+            <span class="card-price">250.000 VND</span>
+            <a href="Chitiet.html#cua19"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k19">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/cuasotmamtoi.jpg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Cua Sốt Mắm Tỏi</h5>
+          <div class="card-footer">
+            <span class="card-price">299.000 VND</span>
+            <a href="Chitiet.html#cua20"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k20">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="../nhahang/img/cuasottrungmuoi.jpeg" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Cua Sốt Trứng Muối</h5>
+          <div class="card-footer">
+            <span class="card-price">325.000 VND</span>
+            <a href="Chitiet.html#cua21"><button class="btn-detail">Chi tiết</button></a>
+          </div>
+          <div class="d-flex justify-content-center mt-2 w-100">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#k21">
+              Đặt Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Additional Cards can go here -->
+</div>
+<div class="container mt-5">
+  <div class="row gy-4" style="margin-left: 200px;">
+    <div class="col-12 col-md-3 text-center">
+      <img src="../nhahang/img/logo.jpg" class="mx-auto d-block" height="150" width="150">
+      <div class="pt-3">Sự hài lòng của quý khách là niềm hạnh phúc của chúng tôi!</div>
+    </div>
+
+    <div class="col-12 col-md-3">
+      <div class="fw-bold text-center">THÔNG TIN DOANH NGHIỆP</div>
+      <div class="pt-3">Tên doanh nghiệp: Thế Giới Hải Sản</div>
+      <div class="pt-2">Mã số doanh nghiệp: 0101234567</div>
+      <div class="pt-2">Ngày cấp: 01/01/2025</div>
+      <div class="pt-2">Lĩnh vực kinh doanh: Dịch vụ ăn uống, tổ chức sự kiện, cung cấp hải sản tươi sống.</div>
+      <div class="bg-opacity-10 bg-primary mt-4 p-3" style="border: 2px dashed rgb(109, 179, 219);">
+        <div class="mb-2">Nhà hàng xin được chân thành tiếp nhận góp ý của Quý thực khách. Xin cảm ơn!</div>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-hover fw-bold fst-italic" style="width: 80px; height: 35px;">Góp ý</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-12 col-md-3 mb-4">
+      <div class="fw-bold text-center">HỆ THỐNG NHÀ HÀNG</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i> Số 88 Đại Lộ Biển Xanh, Quận Hải Đăng, Hà Nội</div>
+      <div><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1919</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i> 999 Đường Sóng Biển, Phường Hải Âu, Quận 7, TP. HCM</div>
+      <div><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1515</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i> 12A Đường Cát Trắng, Quận Biển Đông, Đà Nẵng</div>
+      <div><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1616</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i> 101 Đại lộ Ngọc Biển, TP. Nha Trang</div>
+      <div><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1717</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i> 45 Đường Đại Dương, Quận An Hòa, TP. Cần Thơ</div>
+      <div><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1818</div>
+    </div>
+  </div>
+</div>
+  <a href="#" id="backToTopBtn">↑</a>
+  
+  <script>
+  window.onscroll = function() {
+    var btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+  </script>
+
+    <script>
+  function changeQuantity(amount, button) {
+    const modal = button.closest('.modal'); // Tìm modal đang thao tác
+    const input = modal.querySelector('.quantity-input'); // Tìm input trong modal đó
+
+    let current = parseInt(input.value);
+    current += amount;
+    if (current < 1) current = 1;
+    input.value = current;
+  }
+</script>
+<script>
+function changeQuantity(amount, button) {
+    const input = button.parentElement.querySelector(".quantity-input");
+    let current = parseInt(input.value);
+    if (current + amount >= 1) {
+        input.value = current + amount;
+    }
+}
+
+function addToCartFromModal(button) {
+    const modal = button.closest('.modal');
+    const name = modal.querySelector('h4').innerText;
+    const priceText = modal.querySelector('.text-danger').innerText;
+    const image = modal.querySelector('img').src;
+    const quantity = parseInt(modal.querySelector('.quantity-input').value);
+    const note = modal.querySelector('#note').value;
+
+    const price = parseInt(priceText.replace(/[^\d]/g, '')); // Chuyển "250.000₫" thành 250000
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let existingIndex = cart.findIndex(item => item.name === name && item.note === note);
+
+    if (existingIndex !== -1) {
+        cart[existingIndex].quantity += quantity;
+    } else {
+        cart.push({ name, price, image, quantity, note });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Đã thêm vào giỏ hàng!");
+}
+</script>
+<script>
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const countSpan = document.getElementById("cart-count");
+    if (countSpan) {
+      countSpan.textContent = totalItems;
+      countSpan.style.display = totalItems > 0 ? "inline-block" : "none";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<div class="modal fade" id="k1" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tom-cang-xanh-lam-chay-toi.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Càng Cháy Tỏi</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">150.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k2" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomalaskasotme.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Alaska Sốt Me</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">2.300.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k3" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomcangxanhnaucari.webp" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Càng Nấu Cari</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">200.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k4" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomcuonkhoaitay.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Cuộn Khoai Tây</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">99.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k5" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomhumalaskasototsingapore.webp" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Alaska Sốt Sing</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">2.599.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k6" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomhumbonghap.webp" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Hùm Bông Hấp</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">1.199.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k7" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomhumchao.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Cháo Tôm Hùm</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">999.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k8" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomhumnuongphomai.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Hùm Nướng Phô Mai</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">1.150.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k9" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomhumsototsingapore.webp" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Hùm Sốt Sing</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">1.050.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k10" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tommunibotoi.png" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Mũ Ni Bơ Tỏi</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">400.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k11" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tommunisotme.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Mũ Ni Sốt Me</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">400.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k12" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomsotkieumexico.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Sốt Kiểu Mexico</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">150.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k13" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/tomsottieuden.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Tôm Sốt Tiêu Đen</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">299.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k14" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/cuacomhap.webp" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Cua Cốm Hấp</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">399.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k15" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/cuahoangdesotbotoi.png" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Cua Hoàng Đế Sốt Bơ Tỏi</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">2.999.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k16" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/cuahoangdesotphomai.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Cua Hoàng Đế Sốt Phô Mai</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">2.999.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k17" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/cuahoangdesottrungmuoi.png" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Cua Hoàng Đế Trứng Muối</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">3.150.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k18" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/cuamien.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Miến Xào Cua</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">350.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k19" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/cualonghongkong.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Cua Lông HongKong</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">250.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k20" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/cuasotmamtoi.jpg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Cua Sốt Mắm Tỏi</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">299.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="k21" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <!-- Nút đóng -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap">
+        <!-- Hình ảnh món ăn -->
+        <div class="col-md-5 text-center mb-3">
+          <img src="../nhahang/img/cuasottrungmuoi.jpeg" class="img-fluid rounded" alt="Tôm Càng Cháy Tỏi">
+        </div>
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-7 ps-4">
+          <h4>Cua Sốt Trứng Muối</h4>
+          <p><span class="text-success"> <i class="bi bi-check-lg"></i> Còn hàng</span></p>
+          <h5 class="text-danger">325.000₫</h5>
+          <label for="note" class="form-label mt-3">Ghi chú cho món ăn:</label>
+          <textarea id="note" class="form-control mb-3" rows="2"></textarea>
+          <label class="form-label">Số lượng:</label>
+          <div class="input-group mb-3" style="width: 150px;">
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1, this)">-</button>
+            <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+            <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1, this)">+</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-warning w-50" onclick="addToCartFromModal(this)">🛒 Thêm vào giỏ</button>
+            <button class="btn btn-danger w-50">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

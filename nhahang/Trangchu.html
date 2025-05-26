@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Chủ Nhà Hàng</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css.css">
+  <link rel="icon" href="../nhahang/img/favicon-32x32.png" type="image/png">
+
+</head>
+<body>
+  <div id="crs" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-img-wrapper">
+          <img src="../nhahang/img/br1.jpg" class=" carousel-img" alt="Image 1">
+          <div class="overlay"></div>
+        </div>
+        <div class="carousel-caption">
+          <h1 class="lobster-font fs-1 fs-sm-3 fs-md-1 ">Tinh hoa ẩm thực – Muôn vàn hương vị</h1>
+          <p></p>
+          <h4 class="fs-5 fs-sm-6">Món ăn phong phú và tươi ngon được chọn lựa kĩ càng <h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-img-wrapper">
+          <img src="../nhahang/img/br2.jpg" class="d-block carousel-img" alt="Image 2">
+          <div class="overlay"></div>
+        </div>
+        <div class="carousel-caption">
+          <h1 class=" lobster-font fs-1 fs-sm-3 fs-md-1">Hải sản tươi sống, vị biển trọn vẹn!</h1>
+          <p></p>
+          <h4 class="fs-5 fs-sm-6">Mỗi miếng ăn là một chuyến du lịch đến biển cả</h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-img-wrapper">
+          <img src="../nhahang/img/br3.jpg" class="d-block carousel-img" alt="Image 3">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h1 class=" lobster-font fs-1 fs-sm-3 fs-md-1">Khơi nguồn cảm hứng từ mỗi món ăn</h1>
+            <p></p>
+            <h4 class="fs-5 fs-sm-6">Đầu bếp có hơn 20 năm kinh nghiệm</h4>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-img-wrapper">
+          <img src="../nhahang/img/br4.jpg" class="d-block carousel-img" alt="Image 4">
+          <div class="overlay"></div>
+          <div class="carousel-caption ">
+            <h1 class=" lobster-font fs-1 fs-sm-3 fs-md-1">Nơi mỗi bữa ăn trở thành một trải nghiệm đặc biệt</h1>
+            <p></p>
+            <h4 class="fs-5 fs-sm-6">Không gian sang trọng, hương vị đậm đà, mọi khoảnh khắc đều đáng nhớ</h4>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-img-wrapper">
+          <img src="../nhahang/img/br5.jpg" class="d-block carousel-img" alt="Image 5">
+          <div class="overlay"></div>
+          <div class="carousel-caption ">
+            <h1 class=" lobster-font fs-1 fs-sm-3 fs-md-1">Hương vị hoàn hảo, cảnh biển tuyệt vời</h1>
+            <p></p>
+            <h4 class="fs-5 fs-sm-6">Để mỗi bữa ăn trở thành một kỷ niệm đáng nhớ, gắn liền với không gian biển xanh mát</h4>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-img-wrapper">
+          <img src="../nhahang/img/br6.jpg" class="d-block carousel-img" alt="Image 6">
+          <div class="overlay"></div>
+          <div class="carousel-caption fs-1 fs-sm-3 fs-md-1">
+            <h1 class=" lobster-font">Dịch vụ tận tâm, phục vụ chu đáo</h1>
+            <p></p>
+            <h4 class="fs-5 fs-sm-6">Chúng tôi luôn đặt niềm vui và sự hài lòng của bạn lên hàng đầu</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#crs" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#crs" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-glass sticky-top" style="height: 85px;margin-top: -85px;">
+    <div class="container">
+      <a href="Trangchu.html" class="navbar-brand"><img class="rounded-pill" src="../nhahang/img/logo.jpg" style="width:70px;height:70px;"></a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link  fst-italic" href="Trangchu.html" style="color: rgb(94, 193, 228);"><i class="bi bi-suit-diamond-fill"></i>Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fst-italic" href="Gioithieu.html"><i class="bi bi-suit-diamond-fill"></i> Giới thiệu</a>
+          </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link text-white fst-italic" href="Thucdon.html" id="sashimiDropdown" aria-expanded="false">
+            <i class="bi bi-suit-diamond-fill"></i> Thực đơn</a>
+          </a>
+            <ul class="dropdown-menu dropdown-menu-end p-3 text-center" aria-labelledby="sashimiDropdown" style="min-width: 300px; border-radius: 0%;">
+              <div class="row">
+                <div class="col-6">
+                  <a class="dropdown-item fw-bold" href="Monkhaivi.html">Món khai vị</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="tomcuaghe.html">Tôm-Cua</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="mucbachtuot.html">Mực-Bạch Tuột</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="ngheusooc.html">Nghêu-Sò-Ốc</a>
+                </div>
+                <div class="col-6 border-start ps-3">
+                  <a class="dropdown-item fw-bold" href="cabien.html">Cá Biển</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="sashimi.html">Sashimi</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold" href="thucuong.html">Đồ Uống</a>
+                  <hr class="my-1">
+                  <a class="dropdown-item fw-bold " href="khac.html">Khác</a>
+                </div>
+              </div>
+            </ul>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fst-italic" href="Tintuc.html"><i class="bi bi-suit-diamond-fill"></i> Tin Tức</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fst-italic" href="Khonggian.html"><i class="bi bi-suit-diamond-fill"></i> Không gian nhà hàng</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fst-italic" href="Datban.html"><i class="bi bi-suit-diamond-fill"></i> Đặt bàn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fst-italic" href="Lienhe.html"><i class="bi bi-suit-diamond-fill"></i> Liên hệ</a>
+          </li>
+        </ul>
+        <!-- Cần chèn trong phần body hoặc trong navbar -->
+<div class="d-flex align-items-center">
+  <!-- Icon người dùng với dropdown -->
+  <div class="dropdown">
+    <i class="bi bi-person text-white fs-4" 
+       id="userDropdown" 
+       data-bs-toggle="dropdown" 
+       aria-expanded="false" 
+       style="cursor: pointer; margin-right: 30px;"></i>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown" style="margin-left: -40px; border-radius: 0%;">
+      <li><a class="dropdown-item" href="Dangnhap.html">Đăng nhập</a></li>
+      <li><a class="dropdown-item" href="Dangky.html">Đăng ký</a></li>
+    </ul>
+  </div>
+ <a href="mau.html" class="position-relative me-3">
+          <i class="bi bi-cart3 fs-5 text-white"></i>
+          <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </a>
+</div>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+  <h1 class="text-center pt-5 lobster-font" style="color: #093f75;">
+    Chào mừng tới Thế Giới Hải Sản
+  </h1>
+    <div class="container py-3">
+      <div class="d-flex align-items-center">
+        <div class="flex-grow-1 pe-3">
+          <hr style="border-top: 1px solid #0d5196;">
+        </div>
+        <div class="flex-grow-1 ps-3">
+          <hr style="border-top: 1px solid #0d5196;">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center pt-5">
+  <div class="col-lg-4 col-md-6 col-12 mb-4">
+    <img src="../nhahang/img/kg.jpg" class="img-fluid zoom-img" alt="Image 1" style="height: 230px; object-fit: cover;">
+    <h4 class="fst-italic fw-light mt-3" style="color: #2997eb;">Không gian sang trọng và thân thiện</h4>
+    <p>Được thiết kế theo chủ đề <br>“Đưa đại dương xanh vào nhà”</p>
+  </div>
+
+  <div class="col-lg-4 col-md-6 col-12 mb-4">
+    <img src="../nhahang/img/monan.jpg" class="img-fluid zoom-img" alt="Image 2" style="height: 230px; object-fit: cover;">
+    <h4 class="fst-italic fw-light mt-3" style="color: #2997eb;">Món ăn phong phú và tươi ngon</h4>
+    <p>Được chế biến từ những đầu bếp <br>trên 20 năm kinh nghiệm</p>
+  </div>
+
+  <div class="col-lg-4 col-md-6 col-12 mb-4">
+    <img src="../nhahang/img/phucvu.jpg" class="img-fluid zoom-img" alt="Image 3" style="height: 230px; object-fit: cover;">
+    <h4 class="fst-italic fw-light mt-3" style="color: #2997eb;">Phục vụ chuyên nghiệp, nhiệt tình</h4>
+    <p>Sự hài lòng của khách hàng <br>là niềm hạnh phúc của chúng tôi!</p>
+  </div>
+</div>
+
+<div class="row pt-5 pb-5">
+  <div class="col-12 col-md-5 d-none d-md-block">
+    <hr style="border-top: 2px solid #0d5196;">
+  </div>
+
+  <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+    <a href="Gioithieu.html">
+      <button type="button" class="btn text-white fs-5 fw-bold fst-italic custom-btn" style="width: 200px; height: 45px; background-color: #2277cd; border-radius: 0;">
+        Xem thêm
+      </button>
+    </a>
+  </div>
+
+  <div class="col-12 col-md-5 d-none d-md-block">
+    <hr style="border-top: 2px solid #0d5196;">
+  </div>
+</div>
+
+<div class="image-container-fluid position-relative sua1" style="
+    background-image: url('../nhahang/img/nen.png');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    color: #072f57;
+">
+  <div class="zigzag-top"></div>
+  <div class="text-center">
+    <h1 class="lobster-font" style="font-size: 4rem; margin-top: -30px;">Thực đơn</h1>
+    <!-- Nội dung khác -->
+     <div class="row pt-4 position-absolute w-100 b2" style="top: 11%; left: 51%; transform: translateX(-50%);">
+          <div class="col-5"><hr style="border-top: 1px solid #0d5196;"></div>
+          <div class="col-2 d-flex justify-content-center align-items-center">
+            <i class="fa fa-utensils" style="font-size: 50px; color: #1283da;"></i>
+          </div>      
+          <div class="col-5"><hr style="border-top: 1px solid #0d5196;"></div>
+        </div> 
+        <div class="zigzag-bottom"></div>
+        <div class="row g-4 justify-content-center pe-4 ps-4" style="margin-top: 100px;">
+          <div class="col-12 col-sm-6 col-md-4 d-flex flex-column mb-4s">
+          <div class="card">
+              <img src="../nhahang/img/baongu.jpg" >
+              <div class="card-body">
+                <div class="card-title fs-4 text-center fw-bold">Bào ngư</div>
+                  <div class="card-text text-center">
+                    Sashimi/ Xốt hồng xíu/ Nướng mỡ hành/ Xốt gan bào ngư nướng phủ vàng
+                  </div>
+              </div>
+          </div>
+          </div>
+              <div class="col-12 col-sm-6 col-md-4 d-flex flex-column mb-4">
+                  <div class="card">
+                      <img src="../nhahang/img/Cá-Song-Đỏ.jpg" >
+                      <div class="card-body">
+                        <div class="card-title fs-4 fw-bold  text-center">Cá Song Đỏ</div>
+                          <div class="card-text text-center">
+                            Sashimi/ Hấp xì dầu/ Nướng muối ớt/ Lẩu/ Sốt cà chua
+                          </div>
+                      </div>  
+                  </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 d-flex flex-column mb-4">
+                      <div class="card">
+                          <img src="../nhahang/img/Cua-Hoàng-Đế.jpg" >
+                          <div class="card-body">
+                            <div class="card-title fs-4 fw-bold  text-center">King Crab</div>
+                          <div class="card-text text-center">
+                            Hấp rượu vang/ Bỏ lò phô mai/ Rang muối/ Rang me
+                          </div>
+                          </div>  
+                      </div>
+              </div>
+              </div>
+              <div class="row g-8 justify-content-center pe-4 ps-4">
+                  <div class="col-12 col-sm-6 col-md-4 d-flex flex-column mb-4">
+                  <div class="card">
+                      <img src="../nhahang/img/Ốc-hương.jpg" >
+                      <div class="card-body">
+                        <div class="card-title fs-4 fw-bold  text-center">Ốc Hương</div>
+                        <div class="card-text text-center">
+                          Nướng mọi/ Hấp/ Cháy tỏi/ Xốt trứng muối / Xào bơ tỏi
+                        </div> 
+                      </div>  
+                  </div>
+                  </div>
+                      <div class="col-12 col-sm-6 col-md-4 d-flex flex-column mb-4">
+                          <div class="card">
+                              <img src="../nhahang/img/Tôm-hùm-bông.jpg" >
+                              <div class="card-body">
+                                <div class="card-title fs-4 fw-bold  text-center">Tôm Hùm Bông</div>
+                          <div class="card-text text-center">
+                            Sashimi/ Bỏ lò phô mai/ Rang muối/ Rang me/ Sốt truffle
+                          </div>
+                              </div>  
+                          </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-4 d-flex flex-column mb-4">
+                              <div class="card">
+                                  <img src="../nhahang/img/Tôm-sú-tự-nhiên.jpg" >
+                                  <div class="card-body">
+                                    <div class="card-title fs-4 fw-bold  text-center">Tôm Sú</div>
+                                    <div class="card-text text-center">
+                                      Sashimi/ Bỏ lò phô mai/ Rang muối/ Rang me/ Cháy tỏi
+                                    </div>
+                                  </div>  
+                              </div>
+                      </div>
+                      </div>
+<!-- Nút Xem thêm căn giữa, responsive -->
+<div class="d-flex justify-content-center align-items-center w-100" style="margin-top: 40px;">
+  <!-- HR bên trái (ẩn trên mobile) -->
+  <div class="d-none d-md-block" style="width: 44%;">
+    <hr style="border-top: 2px solid #063f78; margin: 0 30px;">
+  </div>
+
+  <!-- Nút Xem thêm -->
+  <div>
+    <a href="Thucdon.html">
+      <button type="button" class="btn text-white fs-5 fw-bold fst-italic custom-btn"
+        style="width: 150px; height: 45px; background-color: #2277cd; border-radius: 0;">
+        Xem thêm
+      </button>
+    </a>
+  </div>
+
+  <!-- HR bên phải (ẩn trên mobile) -->
+  <div class="d-none d-md-block" style="width: 44%;">
+    <hr style="border-top: 2px solid #063f78; margin: 0 30px;">
+  </div>
+</div>
+      </div>
+  </div>
+</div>  
+ <div class="container-fluid pb-3">
+    <h1 class="text-center pt-5 lobster-font" style="color: #072f57; font-size: 3rem;">
+      Sự kiện & Tin tức
+    </h1>
+      <div class="container py-3">
+        <div class="d-flex align-items-start">
+          <div class="flex-grow-1 pe-4">
+            <hr style="border-top: 1px solid #084c8f;">
+          </div>
+          <div class="flex-grow-1 ps-4">
+            <hr style="border-top: 1px solid #084c8f;">
+          </div>
+        </div>
+      </div>
+      <div class="container pt-5">
+  <div class="row g-4">
+    <div class="col-12 col-md-6 d-flex justify-content-center">
+      <div class="img-hover-wrapper text-center">
+        <img src="../nhahang/img/sukien.png" class="img-fluid">
+        <div class="caption">
+          <div class="fst-italic fw-bold" style="color:orange; font-size: 20px;">
+            Mừng đại lễ 30/4 & 1/5, Nhà hàng hải sản mang đến ưu đãi hấp dẫn 
+            và thực đơn đặc biệt dành riêng cho kỳ nghỉ của bạn!
+          </div>
+          <div class="p-3">Nhân dịp lễ 30/4 và 1/5, Nhà hàng Hải Sản chúng tôi ...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 d-flex justify-content-center">
+      <div class="img-hover-wrapper text-center">
+        <img src="../nhahang/img/sukien1.png" class="img-fluid">
+        <div class="caption">
+          <div class="fst-italic fw-bold pt-3" style="color:orange; font-size: 20px;">
+            Hương Vị Biển Cả – Trải Nghiệm Bữa Ăn Đầm Ấm Cùng Gia Đình, Cùng Khám Phá Món Ngon
+          </div>
+          <div class="p-3">Giữa nhịp sống sôi động nơi thành thị nhộn nhịp...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="row pt-4 w-100 justify-content-center" style="margin-bottom: 40px;">
+      <div class="col-5 d-none d-lg-block">
+        <hr style="border-top: 2px solid #063f78;">
+      </div>
+      <div class="col-10 col-lg-2 d-flex justify-content-center align-items-center">
+        <a href="Gioithieu.html">
+          <button type="button" class="btn text-white fs-5 fw-bold fst-italic custom-btn"
+                  style="width: 150px; height: 45px; background-color: #2277cd; border-radius: 0;">
+            Xem thêm
+          </button>
+        </a>
+      </div>
+      <div class="col-5 d-none d-lg-block">
+        <hr style="border-top: 2px solid #063f78;">
+      </div>
+    </div>
+  <h1 class="lobster-font d-flex justify-content-center pt-5" style="color:#072f57;font-size: 3rem;">Một số hình ảnh</h1>   
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-6"><hr style="border-top: 1px solid #063f78;"></div>
+      <div class="col-6"><hr style="border-top: 1px solid #063f78;"></div>
+    </div>
+  </div> 
+  </div>
+<div class="image-container-fluid">
+  <!-- Ảnh nền đặt ngoài cùng -->
+<img src="../nhahang/img/anhbien1.jpg" alt="Image with Zigzag" class="img-fluid w-100 bg-image">
+
+  <!-- Nội dung bên trên ảnh nền -->
+  <div class="overlay-content d-flex flex-column align-items-center justify-content-start">
+    <div class="zigzag-top"></div>
+
+    <div class="container bg-light p-3"
+         style="max-width: 1400px; margin-top: 60px; height: auto; min-height: 650px; width: 1200px;">
+      <div class="row mt-3 g-3">
+        <div class="col-12 col-md-4">
+          <img src="../nhahang/img/hinhanh.jpeg" class="img-fluid border"
+               style="border-color: #d9ca26d0; height: 300px; object-fit: cover;">
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="../nhahang/img/hinh.jpg" class="img-fluid border"
+               style="border-color: #d9ca26d0; height: 300px; object-fit: cover;">
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="../nhahang/img/nhahang.jpeg" class="img-fluid border"
+               style="border-color: #d9ca26d0; height: 300px; object-fit: cover;">
+        </div>
+      </div>
+
+
+      <div class="row pt-4">
+        <div class="col-12 col-lg-8">
+          <h4 class="fst-italic text-center text-lg-start" style="color: #1283da;">Giới Thiệu Thế Giới Hải Sản</h4>
+          <div class="text-center text-lg-start pt-3" style="line-height: 1.6;">
+            Tọa lạc tại vị trí thuận tiện, Thế Giới Hải Sản mang đến cho bạn một không gian
+            ấm cúng và sang trọng, nơi bạn có thể thưởng thức những món hải sản tươi ngon, được
+            chế biến từ nguyên liệu nhập khẩu chất lượng cao. Chúng tôi tự hào là điểm đến lý
+            tưởng cho những tín đồ yêu thích hải sản, từ những món nướng, chiên giòn, đến các
+            món hấp, xào đặc trưng. Với đội ngũ đầu bếp tài ba và phong cách phục vụ chuyên 
+            nghiệp, chúng tôi cam kết mang đến cho bạn những trải nghiệm ẩm thực tuyệt vời nhất.
+            Dù bạn đến với gia đình, bạn bè hay tổ chức tiệc, Thế Giới Hải Sản luôn sẵn sàng
+            phục vụ và làm hài lòng bạn.
+            <h5 class="pt-3" style="color: #1283da;">Hãy đến và khám phá thế giới hải sản đích thực ngay hôm nay!</h5>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+          <img src="../nhahang/img/khonggian.jpg" class="img-fluid border"
+               style="border-color: #d9ca26d0; height: 300px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-4 w-100 justify-content-center" style="margin-bottom: 40px;">
+      <div class="col-5 d-none d-lg-block">
+        <hr style="border-top: 2px solid #063f78;">
+      </div>
+      <div class="col-10 col-lg-2 d-flex justify-content-center align-items-center">
+        <a href="Gioithieu.html">
+          <button type="button" class="btn text-white fs-5 fw-bold fst-italic custom-btn"
+                  style="width: 150px; height: 45px; background-color: #2277cd; border-radius: 0;">
+            Xem thêm
+          </button>
+        </a>
+      </div>
+      <div class="col-5 d-none d-lg-block">
+        <hr style="border-top: 2px solid #063f78;">
+      </div>
+    </div>
+  </div>
+</div>
+
+   <div class="image-container-fluid position-relative" style="margin-top: -130px;">
+  <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="false" >
+    <div class="zigzag-top"></div>
+    <div class="position-relative text-center pt-5 testimonial-header" style="z-index: 1;">
+      <div class="lobster-font" style="font-size: 4rem; color: white;">Ý kiến khách hàng</div>
+      <div>
+        <hr style="display: inline-block; width: 40%; margin: 0 25px; height: 2px; background: white; border: none;">
+        <hr style="display: inline-block; width: 40%; margin: 0 25px; height: 2px; background: white; border: none;">
+      </div>
+    </div>
+    <div class="carousel-inner" style="margin-left:-200px;">
+      <div class="carousel-item active ">
+        <div class="carousel-caption ykien">
+          <p class="pt-5 fst-italic" style="font-size: 25px;">Tôi đã thích Thế Giới Hải Sản chỉ sau một lần đến đây.<br>Đồ ăn rất tươi ngon, chế biến rất vừa miệng<br>và các em nhân viên rất lịch sự, nhiệt tình, chu đáo.</p>
+          <div class="author">- ÔNG TRẦN BÁ ĐẠI -</div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-caption ykien pt-4" >
+          <p class="pt-5 fst-italic" style="font-size: 25px;">Không gian ấm cúng, sạch sẽ.<br>Thực đơn phong phú, hải sản tươi sống.<br>Nhất định sẽ quay lại cùng gia đình.</p>
+          <div class="author">- BÀ TRƯƠNG THỊ NGÀ -</div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-caption ykien pt-4">
+          <p class="pt-5 fst-italic"style="font-size: 25px;">Thái độ phục vụ chuyên nghiệp, lịch sự.<br>Giá cả hợp lý so với chất lượng món ăn.<br>Đánh giá 5 sao!</p>
+          <div class="author">- ÔNG ĐẶNG TUẤN KIỆT -</div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-caption ykien pt-4">
+          <p class="pt-5 fst-italic" style="font-size: 25px;">Lần đầu đến đã thấy ấn tượng.<br>Món ăn được trình bày đẹp, phục vụ nhanh.<br>Sẽ giới thiệu bạn bè đến đây.</p>
+          <div class="author">- BÀ THẠCH LÂM NGỌC HÂN -</div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-caption ykien pt-4">
+          <p class="pt-5 fst-italic" style="font-size: 25px;">Món ăn ngon, trình bày đẹp mắt, phục vụ nhanh <br>và tận tình. Không gian sạch sẽ, rất phù hợp để đi ăn <br>cùng gia đình hoặc bạn bè</p>
+          <div class="author">- BÀ LÊ THẢO THẢO -</div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+  </div>
+</div>
+
+<div class="container pt-5" style="margin-top: 50px;">
+  <div class="row" style="height: 450px;">
+    <div class="col-12 col-md-3">
+      <img src="../nhahang/img/logo.jpg" class="mx-auto d-block" height="150px" width="150px">
+      <div class="pt-3 text-center">Sự hài lòng của quý khách là niềm hạnh phúc của chúng tôi!</div>
+    </div>
+
+    <div class="col-12 col-md-3">
+      <div class="fw-bold text-center">THÔNG TIN DOANH NGHIỆP</div>
+      <div class="pt-3">Tên doanh nghiệp: Thế Giới Hải Sản</div>
+      <div class="pt-2">Mã số doanh nghiệp: 0101234567</div>
+      <div class="pt-2">Ngày cấp: 01/01/2025</div>
+      <div class="pt-2">Lĩnh vực kinh doanh: Dịch vụ ăn uống, tổ chức sự kiện, cung cấp hải sản tươi sống.</div>
+
+      <div class="bg-opacity-10 bg-primary mt-4 p-3" style="border: 2px dashed rgb(109, 179, 219);">
+        <div class="mb-2">Nhà hàng xin được chân thành tiếp nhận góp ý của Quý thực khách. Xin cảm ơn!</div>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-hover fw-bold fst-italic" style="width: 80px; height: 35px;">
+            Góp ý
+          </button>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="col-12 col-md-3 ">
+      <div class="fw-bold text-center">HỆ THỐNG NHÀ HÀNG</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>Số 88 Đại Lộ Biển Xanh, Quận Hải Đăng, Hà Nội</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1919</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>999 Đường Sóng Biển, Phường Hải Âu, Quận 7, TP. HCM</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1515</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>12A Đường Cát Trắng, Quận Biển Đông, Đà Nẵng</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1616</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>101 Đại lộ Ngọc Biển, TP. Nha Trang</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1717</div>
+      <div><i class="bi bi-geo-alt-fill text-primary"></i>45 Đường Đại Dương, Quận An Hòa, TP. Cần Thơ</div>
+      <div class=""><i class="bi bi-telephone-fill text-success"></i> Hotline: 1900 1818</div>
+    </div>
+    <div class="col-12 col-md-3">
+      <div class="fw-bold text-center">KẾT NỐI FACEBOOK</div>
+      <div class="bg-light border border-muted facebook-box" style="margin-top: 150px; width: 285px; ">
+        <div class="row a2">
+          <div class="col-2 d-flex align-items-center">
+            <img src="../nhahang/img/logo.jpg" width="50px" height="50px" style="border: 1px solid black;">
+          </div>
+          <div class="col-9 ">
+            <div class="row">
+            <div class="text-primary fw-bold ms-2" style="font-size: 15px;">
+              THẾ GIỚI HẢI SẢN
+              <span class="bg-primary rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 20px; height: 20px; margin-left: 5px;">
+                <i class="bi bi-check2" style="color: white; font-size: 12px;"></i>
+              </span>
+            </div>
+            </div>
+            <div class="row">
+              <div class="bg-light border border-muted" style="display: inline-block; padding: 10px; height: 10px; width: 150px; margin-left: 20px;">
+                <div style="font-size: 14px; margin-top: -10px;"><i class="bi bi-facebook text-primary"></i> Theo dõi trang <i class="bi bi-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+</div>
+<a href="#" id="backToTopBtn">↑</a>
+<script>
+window.onscroll = function() {
+  var btn = document.getElementById("backToTopBtn");
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+</script>
+<script>
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const countSpan = document.getElementById("cart-count");
+    if (countSpan) {
+      countSpan.textContent = totalItems;
+      countSpan.style.display = totalItems > 0 ? "inline-block" : "none";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
